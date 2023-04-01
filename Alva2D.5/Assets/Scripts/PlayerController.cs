@@ -22,6 +22,7 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         anim = GetComponent<Animator>();
+        anim.SetBool("IsMoving", false);
     }
 
     // Update is called once per frame
@@ -29,12 +30,12 @@ public class PlayerController : MonoBehaviour
     {
         movePlayer();
 
-        if (!isFacingRight && horizontal > 0f)
+        if(move.magnitude > 0)
         {
-            Flip();
-        } else if (isFacingRight && horizontal < 0f)
+            anim.SetBool("IsMoving", true);
+        } else
         {
-            Flip();
+            anim.SetBool("IsMoving", false);
         }
     }
 
@@ -46,16 +47,26 @@ public class PlayerController : MonoBehaviour
         //transform.rotation = Quaternion.Slerp(trasnform.rotation, Quaternion.LookRotation(movement), 0.15f);
 
         transform.Translate(movement * speed * Time.deltaTime, Space.World);
-    }
 
-    private void Flip()
-    {
-        if (isFacingRight && horizontal < 0f || !isFacingRight && horizontal > 0f)
+        if (movement.magnitude == 0)
         {
-            isFacingRight = !isFacingRight;
-            Vector3 localScale = transform.localScale;
-            localScale.x *= -1f;
-            transform.localScale = localScale;
+            anim.SetBool("IsMoving", false);
+        }
+        else
+        {
+            anim.SetBool("IsMoving", true);
+            if (movement.x > 0 && !isFacingRight)
+            {
+                // Flip the sprite if the player is moving to the right but is not facing right
+                isFacingRight = true;
+                transform.localScale = new Vector3(-transform.localScale.x, transform.localScale.y, transform.localScale.z);
+            }
+            else if (movement.x < 0 && isFacingRight)
+            {
+                // Flip the sprite if the player is moving to the left but is not facing left
+                isFacingRight = false;
+                transform.localScale = new Vector3(-transform.localScale.x, transform.localScale.y, transform.localScale.z);
+            }
         }
     }
 }
