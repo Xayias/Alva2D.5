@@ -28,6 +28,7 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         movePlayer();
+
         if (!isFacingRight && horizontal > 0f)
         {
             Flip();
@@ -40,6 +41,9 @@ public class PlayerController : MonoBehaviour
     public void movePlayer()
     {
         Vector3 movement = new Vector3(move.x, 0f, move.y);
+
+        // This is used to rotate the 3D Character, Might not use due to sprite
+        //transform.rotation = Quaternion.Slerp(trasnform.rotation, Quaternion.LookRotation(movement), 0.15f);
 
         transform.Translate(movement * speed * Time.deltaTime, Space.World);
     }
