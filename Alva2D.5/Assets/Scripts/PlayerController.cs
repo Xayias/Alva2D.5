@@ -18,6 +18,11 @@ public class PlayerController : MonoBehaviour
         move = context.ReadValue<Vector2>();
     }
 
+    public void Interact(InputAction.CallbackContext context)
+    {
+        Debug.Log("Interacting");
+    }
+
     // Start is called before the first frame update
     void Start()
     {
