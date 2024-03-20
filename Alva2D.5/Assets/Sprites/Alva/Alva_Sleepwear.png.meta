@@ -63,6 +63,7 @@ TextureImporter:
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -72,11 +73,11 @@ TextureImporter:
   textureSettings:
     serializedVersion: 2
     filterMode: 0
-    aniso: -1
-    mipBias: -100
+    aniso: 1
+    mipBias: 0
     wrapU: 1
     wrapV: 1
-    wrapW: -1
+    wrapW: 0
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
@@ -436,6 +437,20 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      Alva_Sleepwear_7: -2621583487144127134
+      Alva_Sleepwear_2: -4033275970129377171
+      Alva_Sleepwear_12: 7425470811717742327
+      Alva_Sleepwear_0: 2177078253672627353
+      Alva_Sleepwear_6: 8832182876283179931
+      Alva_Sleepwear_9: -6809220781565463893
+      Alva_Sleepwear_1: 1173958009445052156
+      Alva_Sleepwear_3: -8017657621559773389
+      Alva_Sleepwear_8: 1361193717516023291
+      Alva_Sleepwear_4: 2411955535473142865
+      Alva_Sleepwear_5: 8395593680259938811
+      Alva_Sleepwear_11: -512376761458585164
+      Alva_Sleepwear_10: -4796931869964082606
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

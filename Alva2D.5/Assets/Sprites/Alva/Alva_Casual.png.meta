@@ -60,6 +60,7 @@ TextureImporter:
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -400,6 +401,19 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      Alva_Casual_6: -2393201473163217562
+      Alva_Casual_0: -8125209042893758122
+      Alva_Casual_4: -5435157829448561254
+      Alva_Casual_10: 2524269192221274718
+      Alva_Casual_1: -2120997458380898412
+      Alva_Casual_3: 9034789161000416630
+      Alva_Casual_8: 2104976717641331457
+      Alva_Casual_9: -479609648477851812
+      Alva_Casual_11: -2835695821855085093
+      Alva_Casual_5: -2792506903812648907
+      Alva_Casual_2: -4988754910710856748
+      Alva_Casual_7: 5330920245704594692
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
